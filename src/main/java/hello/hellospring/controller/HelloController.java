@@ -11,7 +11,7 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model) {
         model.addAttribute("data", "hi!");
-        return "hello";     //resources/templates/hello.html을 찾아가라
+        return "hello";     //resources/templates/hello.html
     }
 
     @GetMapping("hello-mvc")
@@ -21,7 +21,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
-    @ResponseBody   //http의 body부분에 return값을 직접 넣겠다
+    @ResponseBody   //HTTP의 body부분에 return값을 직접 넣겠다
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;
     }
