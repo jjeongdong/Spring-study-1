@@ -27,7 +27,7 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        //return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);    //인터페이스는 new X
+        //return new MemoryMemberRepository();      //인터페이스는 new X
+        return new JdbcMemberRepository(dataSource);
     }
 }
