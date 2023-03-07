@@ -31,7 +31,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;   //객체가 왔을 경우 JSON방식으로 데이터를 만들어 HTTP에 반환
+        return hello;   //객체가 왔을 경우 JSON 방식으로 데이터를 만들어 HTTP에 반환
     }
 
     static class Hello {
