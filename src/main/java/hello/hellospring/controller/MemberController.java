@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-@Controller
+@Controller     //스프링 컨테이너가 뜰 떄 생성됨
 public class MemberController {
-
     private final MemberService memberService;
 
-    @Autowired
+    @Autowired      //Controller가 생성될 때 생성자를 호출, 스프링 컨테이너에 있는 MemberService랑 연결 / (연관관계)
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
@@ -30,7 +29,7 @@ public class MemberController {
         Member member = new Member();
         member.setName(form.getName());
 
-        System.out.println("member = " + member.getName());
+        //System.out.println("member = " + member.getName());
 
         memberService.join(member);
 
